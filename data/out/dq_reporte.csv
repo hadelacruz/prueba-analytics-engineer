@@ -1,0 +1,22 @@
+tabla,regla,registros,ids,accion,fecha_ejecucion
+clientes,duplicado_exacto,1,2,eliminado,2026-10-05 19:38:45.749108
+clientes,llave_repetida_con_datos_distintos,0,,se conserva una versión y se reporta,2026-10-05 19:38:45.749108
+clientes,fecha_alta_en_formato_dd/MM/yyyy,1,2,convertida a DATE,2026-10-05 19:38:45.749108
+clientes,fecha_alta_no_interpretable,0,,queda NULL,2026-10-05 19:38:45.749108
+clientes,departamento_normalizado,1,2,initcap(trim(departamento)),2026-10-05 19:38:45.749108
+clientes,departamento_no_reconocido,0,,se conserva,2026-10-05 19:38:45.749108
+clientes,segmento_faltante,1,4,se asigna 'No definido',2026-10-05 19:38:45.749108
+cuentas,duplicado_exacto,0,,eliminado,2026-10-05 19:38:45.749108
+cuentas,llave_repetida_con_datos_distintos,0,,se conserva una versión y se reporta,2026-10-05 19:38:45.749108
+cuentas,cliente_id_inexistente,1,106,se conserva con flag_cliente_inexistente,2026-10-05 19:38:45.749108
+transacciones,duplicado_exacto,1,T004,eliminado,2026-10-05 19:38:45.749108
+transacciones,llave_repetida_con_datos_distintos,0,,se conserva una versión y se reporta,2026-10-05 19:38:45.749108
+transacciones,fecha_hora_no_interpretable,0,,"queda NULL, sin tasa asignada",2026-10-05 19:38:45.749108
+transacciones,moneda_normalizada,1,T007,upper(trim(moneda)),2026-10-05 19:38:45.749108
+transacciones,moneda_no_soportada,0,,monto_gtq NULL,2026-10-05 19:38:45.749108
+transacciones,tipo_no_reconocido,0,,se conserva,2026-10-05 19:38:45.749108
+transacciones,monto_nulo,1,T006,"flag_monto_nulo, monto_gtq NULL",2026-10-05 19:38:45.749108
+transacciones,monto_no_numerico,0,,"flag_monto_nulo, monto_gtq NULL",2026-10-05 19:38:45.749108
+transacciones,monto_negativo,1,T003,"flag_monto_negativo, monto_gtq con valor absoluto",2026-10-05 19:38:45.749108
+transacciones,cuenta_inexistente,0,,se conserva con flag_cuenta_inexistente,2026-10-05 19:38:45.749108
+transacciones,usd_sin_tasa,0,,"flag_usd_sin_tasa, monto_gtq NULL",2026-10-05 19:38:45.749108
